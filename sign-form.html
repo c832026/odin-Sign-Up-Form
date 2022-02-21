@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Odin - Sign Up</title>
+</head>
+<body>
+    <aside class="sidebar">
+        <h1 class="banner-heading"><img src="./assets/odin-lined.png" alt="odin-icon" class="heading-icon"> ODIN</h1>
+        <footer>Photo by <a href="https://unsplash.com/@panduior">@panduior</a> on <a href="https://unsplash.com/">Unsplash</a></footer>
+    </aside>
+    <main class="main">
+        <header>
+            <p>
+                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                <br>
+                Sign up <em>now</em> to get started.
+                <br>
+                <br>
+                You <em>know</em> you want to.
+            </p>
+        </header>
+        <form action="#" id="sign-up-form">
+            <p>Let's do this!</p>
+            <div class="flex-form-container">
+                <div class="flex-form-input">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" name="firstName" id="first-name" placeholder="ex. Thor">
+                </div>
+                <div class="flex-form-input">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" name="lastName" id="last-name" placeholder="ex. Odinson">
+                </div>
+                <div class="flex-form-input">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="flex-form-input">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" name="phoneNum" id="phone">
+                </div>
+                <div class="flex-form-input">
+                    <label for="password">PASSWORD</label>
+                    <div id="pw-container"><input type="password" name="password" id="password"></div>
+                </div>
+                <div class="flex-form-input">
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                </div>
+                <input type="submit" class="hidden" id="submit-btn">
+            </div>
+
+        </form>
+        <footer>
+                <label for="submit-btn" class="form-submit">Create Account</label>
+                <p>Already have an account? <a href="#" id="login-link">Log in</a></p>
+        </footer>
+    </main>
+</body>
+</html>

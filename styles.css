@@ -1,0 +1,229 @@
+/* css-reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css-reset end */
+
+@font-face {
+    font-family: heading-font;
+    src: url(./assets/Norse-Bold.otf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --sidebar-width: 35%;
+    --main-header-height: 35%;
+    --main-form-height: 35%;
+    --main-footer-height: calc(100% - calc(var(--main-header-height) + var(--main-form-height)));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+em {
+    font-style: italic;
+}
+
+body {
+    display: flex;
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar {
+    position: relative;
+    width: var(--sidebar-width);
+    height: 100%;
+    background: center/100% 100% url(./assets/signUpBackground.jpg);
+}
+
+.main {
+    width: calc(100% - var(--sidebar-width));
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:center  ;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.main>* {
+    padding-left: 50px;
+}
+
+.banner-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    color: white;
+    font-size: 5.5rem;
+    font-family: 'heading-font','Times New Roman', Times, serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 200px;
+}
+
+img.heading-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.sidebar>footer,
+.sidebar>footer a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.sidebar>footer {
+    position: absolute;
+    bottom: 3px;
+    left: 25%;
+}
+
+.main>header {
+    height: var(--main-header-height);
+}
+
+.main>header>p {
+    margin-top: 18%;
+    margin-right: 20%;
+    font-size: 1.3rem;
+    line-height: 28px;
+}
+
+.main>form {
+    background-color: white;
+    height: var(--main-form-height);
+}
+
+.main>footer {
+    height: var(--main-footer-height);
+}
+
+.flex-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+}
+
+.flex-form-input {
+    width: 48%;
+    line-height: 30px;
+}
+
+.flex-form-input input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+}
+
+.flex-form-input>input:focus {
+    box-shadow: 1px 1px 7px #555555;
+}
+
+.flex-form-input:nth-child(even) {
+    margin-left: auto;
+}
+
+.form-submit {
+    display: inline-block;
+    line-height: 30px;
+    background-color: #596D48;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px 40px;
+    color: aliceblue;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.form-submit:hover {
+    background-color: hsl(92, 20%, 50%);
+}
+
+.form-submit:active {
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#sign-up-form>p {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+#login-link {
+    color: #596D48;
+    text-decoration: none;
+}
+
+#email:invalid {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid red;
+}
+
+#password {
+    border: 1px solid red;
+    outline: none;
+}
+
+#pw-container::after {
+    content: '* Passwords do not match';
+    color: red;
+    font-size: 0.8rem;
+}
